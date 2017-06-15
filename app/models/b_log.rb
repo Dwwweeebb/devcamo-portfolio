@@ -1,0 +1,2 @@
+class BLog < ApplicationRecord
+end
