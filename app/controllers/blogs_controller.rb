@@ -6,7 +6,11 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
+    if logged_in?(:site_admin)
     @blogs = Blog.page(params[:page]).per(5)
+    else
+      @blogs = Blog.Published.page(params[:page]).per(5)
+    end
     @page_title = "My Portfolio Blog"
   end
 
@@ -67,8 +71,8 @@ class BlogsController < ApplicationController
 
   def toggle_status
     if @blog.draft?
-      @blog.published!
-    elsif @blog.published?
+      @blog.Published!
+    elsif @blog.Published?
       @blog.draft!
     end
         
