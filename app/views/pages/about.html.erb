@@ -7,11 +7,27 @@
     <div class="row">
         <div class="col-md-4">
           <%= image_tag "https://c1.staticflickr.com/1/639/20014465563_c69e30c7ce_c.jpg", width: 315, alt: "profile image" %>
+        <div class="skills">
+          <% @skills.each do |skill| %>
+            <div class="skill">
+              <h4><%= skill.title %></h4>
+              <div class="progress">
+                <div
+                  class="progress-bar progress-bar-striped bg-primary"
+                  role="progressbar"
+                  aria-valuenow="<%= skill.percent_utilized %>"
+                  aria-valuemax="100"
+                  style="width: <%= skill.percent_utilized %>%"
+                ></div>
+              </div>
+            </div>
+          <% end %>
         </div>
+      </div>
 
       <div class="col-md-8">
         <p>Darth Vader, also known by his birth name Anakin Skywalker, 
-          is a fictional character in the Star Wars franchise.
+        is a fictional character in the Star Wars franchise.
           Vader appears in the original film trilogy as a pivotal antagonist whose actions drive the plot, 
           while his past as Anakin Skywalker and the story 
           of his corruption are central to the narrative of the prequel trilogy.</p>
