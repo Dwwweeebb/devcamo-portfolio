@@ -2,28 +2,74 @@
   <div class="card">
     <h1>About Me</h1>
 
-      <hr>
-      
-      <div class="row">
+    <hr>
+
+    <div class="row">
         <div class="col-md-4">
           <%= image_tag "https://c1.staticflickr.com/1/639/20014465563_c69e30c7ce_c.jpg", width: 315, alt: "profile image" %>
         </div>
-      
-        <div class="col-md-8">
-          <p>Darth Vader, also known by his birth name Anakin Skywalker, 
+
+      <div class="col-md-8">
+        <p>Darth Vader, also known by his birth name Anakin Skywalker, 
           is a fictional character in the Star Wars franchise.
           Vader appears in the original film trilogy as a pivotal antagonist whose actions drive the plot, 
           while his past as Anakin Skywalker and the story 
           of his corruption are central to the narrative of the prequel trilogy.</p>
-      
-          <p>Darth Vader has become one of the most iconic villains in popular culture, and has been listed among the 
+
+        <p>Darth Vader has become one of the most iconic villains in popular culture, and has been listed among the 
           greatest villains and fictional characters ever.
           The American Film Institute listed him as the third greatest movie villain in cinema history on 100 Years... 
           100 Heroes and Villains, 
           behind Hannibal Lecter and Norman Bates. However, other critics consider him a tragic hero, citing his
           original motivations for the greater good before his fall to the dark side.</p>
-        </div>
+
+        <p>
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#jobHistory"
+            aria-expanded="false"
+            aria-controler="jobHistory"
+          >
+            Job History
+          </button>
+
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#education"
+            aria-expanded="false"
+            aria-controler="education"
+          >
+            Education
+          </button>
+        </p>
+
+        <p>
+          <div class="collapse" id="jobHistory">
+            <div class="card card-block">
+              Job 1
+            </div>
+            <div class="card card-block">
+              Job 2
+            </div>
+          </div>
+
+          <div class="collapse" id="education">
+            <div class="card card-block">
+              School 1
+            </div>
+            <div class="card card-block">
+              School 2
+            </div>
+            <div class="card card-block">
+              School 3
+            </div>
+          </div>
+        </p>
       </div>
+    </div>
   </div>
 </div>
-
